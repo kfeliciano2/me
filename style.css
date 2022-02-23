@@ -14,7 +14,7 @@ html,body{
     color:white;
     background-color:#04345C;
     margin:1em;
-    overflow-x: hidden;
+    
 }
 
 
@@ -27,6 +27,7 @@ nav{
 .mobile-nav-toggle{
     display:none;
 }
+
 ul{
     display:flex;
     gap:1rem;
@@ -257,46 +258,25 @@ footer{
 
 
 
-@media (min-width: 801px){
-/* need to fill if want, if not the toss*/
-
-}
-
-
-
 @media only screen and (max-width: 800px){
-   
+   /*navigation*/
     .primary-navigation {
         position:fixed;
         inset:0 0 0 30%;
         z-index: 1000;
         flex-direction:column;
         padding:min(15vh, 10rem);
-        gap:3em;
-        transform: translateX(100%);   
+        --gap:2em;
+        transform: translateX(100%);  
+        transition: transform 1s ease-out; 
     }
 
-    primary-navigation[data-visable="true"]{
+    .primary-navigation[data-visible="true"]{
         transform: translateX(0%);
     }
-
-
-    .container{
-      grid-template: repeat(4, 1fr) / repeat(1, 1fr);
-      }
-      summary{
-          grid-template-columns: 100%;
-          
-      }
-
-      .myPhoto{
-        display:none;
-    }
-    
-
     .mobile-nav-toggle{
         display:block;
-        position:absolute;
+        position:fixed;
         aspect-ratio: 1;
         z-index:9999;
         width:2rem;
@@ -305,6 +285,22 @@ footer{
         border:0;
 
     }
+
+/*project*/
+    .container{
+      grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+      }
+      summary{
+          grid-template-columns: 100%;
+          
+      }
+/*about me*/
+      .myPhoto{
+        display:none;
+    }
+    
+
+ 
 }
    
     
