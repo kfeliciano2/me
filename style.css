@@ -5,15 +5,17 @@
 :root{
     --color: hsl(175, 56%, 63%); 
     --secondaryColor:hsl(203, 66%, 26%);
+    --primary-font: font-family: 'Roboto', sans-serif;
+    --secondary-font: font-family: 'Outfit', sans-serif;
 }
 html{
     scroll-behavior: smooth;
 }
 
 html,body{
-    color:white;
-    background-color:#04345C;
+    
     margin:1em;
+    font-family: var(--primary-font);
     
 }
 
@@ -34,13 +36,7 @@ ul{
     gap:1rem;
     
 }
-.logo{
-    border:2px solid var(--color);
-    border-radius:50%;
-   padding:1em;
-   margin:5px;
 
-}
 
 .primary-navigation{
     list-style:none;
@@ -66,7 +62,7 @@ ul{
 }
 a{
     text-decoration: none;
-    color:white;
+    
     cursor:pointer;
     
 }
@@ -83,7 +79,7 @@ a:hover{
 /*intro section */
 
 header{
-    height:80vh;
+    height: 40vh;
     display:flex;
     
 }
@@ -124,20 +120,10 @@ div.social{
 }
 
 
-/* about me section */
-summary{
-    display:grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows:  1fr;
-    justify-items: center; 
-    font-size:1em;
-    margin:3rem;
-}
 
-.aboutInfo{
-    grid-template-areas: 1 / 1 / span 1/ span 1;
-    
-}
+
+
+
 
 .myPhoto{
     grid-template-areas: 1/ 2/ span 1/ span 1;
