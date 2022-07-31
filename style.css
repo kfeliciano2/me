@@ -1,10 +1,10 @@
 *{
-  
     box-sizing:border-box; 
+    
 }
 :root{
-    --color: hsl(175, 56%, 63%); 
-    --secondaryColor:hsl(203, 66%, 26%);
+    --color:  hsl(203, 66%, 26%);
+    --secondaryColor:hsl(175, 56%, 63%);;
     --primary-font: font-family: 'Roboto', sans-serif;
     --secondary-font: font-family: 'Outfit', sans-serif;
 }
@@ -14,7 +14,7 @@ html{
 
 html,body{
     
-    margin:1em;
+    margin:5em;
     font-family: var(--primary-font);
     
 }
@@ -22,9 +22,9 @@ html,body{
 /*navigation*/
 nav{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top:0 auto;
+   
     font-size: 18px;
 }
 .mobile-nav-toggle{
@@ -62,7 +62,7 @@ ul{
 }
 a{
     text-decoration: none;
-    
+    color: black;
     cursor:pointer;
     
 }
@@ -77,74 +77,44 @@ a:hover{
 
 
 /*intro section */
-
-header{
-    height: 40vh;
-    display:flex;
-    
-}
-
-div.contain{
+main{
     display: flex;
-    flex-direction:column;
     justify-content:center;
+    align-items:center;
+    height: 80vh;
   
 }
 
-.hello{
-    color:var(--color);
-}
-
-h1{
-    font-size: 5vw;
-    margin-bottom:1px;;
-}
-
-h1.description{
-    margin-top:0;
-}
-
-
-i.icon{
-    font-size:6vw;
-    padding:1rem;
-    background-color: var(--secondaryColor);
-    border-radius: 50%;
-    margin:1em;
-    border: 1px solid var(--color);
-    
-}
-
-div.social{
-    padding:3rem;
-}
-
-
-
-
-
-
-
-.myPhoto{
-    grid-template-areas: 1/ 2/ span 1/ span 1;
-}
-
-.me{
-    height:450px;
-    filter:drop-shadow(30px 10px 4px var(--color));
-}
-
-
-.button{
-    border: 3px solid var(--color);
-    border-radius: 3px;
-    padding:1em;
-    position: absolute;
-}
-
-.button:hover{
+.adj{
+    display: inline-block;
+    color:white;
     background-color: var(--color);
 }
+
+/*portfolio*/
+
+section{
+    background-color: var(--color);
+    color:white;
+    display: flex;
+    
+}
+.portfolio{
+    display:flex;
+}
+.imgg{
+    background-color: deeppink;
+    width:50%;
+}
+.theInfo{
+    background-color:firebrick;
+    width:50%;
+}
+
+
+
+
+
 
 
 
@@ -236,36 +206,13 @@ border-color:var(--secondaryColor);
     margin-top: 0.25em;
 }
 
-/*contact section*/
-
-
-.connect{
-    text-align:center;
-    border:3px solid var(--color);
-    margin:1em auto;
-    padding:1em;
-    max-width:400px;
-}
-
-.chat{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-around;
-    padding:1em 0;
-}
-.chat a{
-    background-color:var(--secondaryColor);
-    padding:0 7px;
-    border-radius:5px;
-}
-
 footer{
     text-align:center;
 }
 
 
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 750px){
    /*navigation*/
     .primary-navigation {
         position:fixed;
@@ -301,14 +248,3 @@ footer{
           grid-template-columns: 100%;
           
       }
-/*about me*/
-      .myPhoto{
-        display:none;
-    }
-    
-
- 
-}
-   
-    
-   
