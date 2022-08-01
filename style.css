@@ -16,7 +16,7 @@ html,body{
     
     margin:5em;
     font-family: var(--primary-font);
-    
+  
 }
 
 /*navigation*/
@@ -96,20 +96,47 @@ main{
 section{
     background-color: var(--color);
     color:white;
-    display: flex;
+    display:flex;
     
 }
 .portfolio{
-    display:flex;
+   display:block;
+ 
+   margin-bottom: 4em;
+
+ 
+}
+
+.reverse{
+    flex-direction: row-reverse;
 }
 .imgg{
-    background-color: deeppink;
+
     width:50%;
+    
 }
+.imgg img{
+    max-width: 30rem;
+}
+
 .theInfo{
-    background-color:firebrick;
+
     width:50%;
 }
+.button{
+   
+    border-radius:5rem;
+    padding: 1em 1em;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    color: white; 
+    border: 2px solid palevioletred;
+    
+}
+
 
 
 
@@ -240,6 +267,10 @@ footer{
 
     }
 
+    .me{
+        display:none;
+    }
+
 /*project*/
     .container{
       grid-template: repeat(4, 1fr) / repeat(1, 1fr);
@@ -248,3 +279,5 @@ footer{
           grid-template-columns: 100%;
           
       }
+    }
+      
